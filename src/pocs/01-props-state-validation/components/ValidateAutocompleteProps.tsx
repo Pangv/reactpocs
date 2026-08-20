@@ -1,34 +1,43 @@
-import { useState } from 'react';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
+import { Autocomplete, Stack, TextField } from '@mui/material';
+import { SourceFileTag } from '../../../components/SourceFileTag';
+import { meta } from '../meta';
 
-type Validator = (value: string) => string | null;
-
-export interface ValidatedAutocompletePropsProps {
+interface ValidatedAutocompleteProps {
   options: string[];
   value: string;
   onChange: (value: string) => void;
+  error: string | null;
   label: string;
-  validator: Validator;
 }
 
-export default function ValidatedAutocompleteProps({ options, value, onChange, label, validator }: ValidatedAutocompletePropsProps) {
-  const [touched, setTouched] = useState(false);
-  const errorMessage = validator(value);
-  const showError = touched && Boolean(errorMessage);
-
+export function ValidatedAutocompleteProps({
+  options,
+  value,
+  onChange,
+  error,
+  label,
+}: ValidatedAutocompleteProps) {
   return (
-    <Autocomplete
-      freeSolo
-      options={options}
-      value={value}
-      onChange={(_event, nextValue) => onChange(nextValue ?? '')}
-      onInputChange={(_event, nextValue) => onChange(nextValue)}
-      renderInput={(params) => (
-        <TextField {...params} label={label} error={showError}
-          helperText={showError ? errorMessage : 'Auswahl treffen oder eigenen Wert eingeben.'}
-          onBlur={() => setTouched(true)} />
-      )}
-    />
+    <Stack spacing={1}>
+      <SourceFileTag
+        fileName="ValidatedAutocompleteProps.tsx"
+        path="src/pocs/01-props-state-validation/components/ValidatedAutocompleteProps.tsx"
+        repoBaseUrl={meta.repoBaseUrl!}
+      />
+      <Autocomplete
+        freeSolo
+        options={options}
+        inputValue={value}
+        onInputChange={(_, newValue) => onChange(newValue)}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            label={label}
+            error={Boolean(error)}
+            helperText={error ?? ' '}
+          />
+        )}
+      />
+    </Stack>
   );
 }

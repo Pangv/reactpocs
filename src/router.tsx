@@ -11,7 +11,7 @@ function PocRoute() {
     return <Navigate to="/" replace />;
   }
 
-  const Component = entry.Component;
+  const Component = entry.component;
   return <Component />;
 }
 

@@ -12,7 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-import { pocRegistry } from '../registry/pocRegistry';
+import { pocRegistry } from '@/registry/pocRegistry';
 
 const drawerWidth = 272;
 

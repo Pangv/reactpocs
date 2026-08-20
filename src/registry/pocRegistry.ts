@@ -1,14 +1,29 @@
-import type { ComponentType } from 'react';
-import PocPropsStateValidation from '../pocs/01-props-state-validation';
-import { meta } from '../pocs/01-props-state-validation/meta';
+import type { JSX } from 'react';
 
-export interface PocEntry {
+export interface PocSourceFile {
+  label: string;
+  path: string;
+}
+
+export interface PocMeta {
   id: string;
   title: string;
   description: string;
-  Component: ComponentType;
+  repoBaseUrl?: string;
+  sourceFiles?: PocSourceFile[];
 }
 
+export interface PocEntry extends PocMeta {
+  component: React.LazyExoticComponent<() => JSX.Element>;
+}
+
+// Beispiel-Registrierung (Import je nach bestehendem Setup anpassen):
+import { lazy } from 'react';
+import meta01 from '../pocs/01-props-state-validation/meta';
+
 export const pocRegistry: PocEntry[] = [
-  { ...meta, Component: PocPropsStateValidation },
+  {
+    ...meta01,
+    component: lazy(() => import('../pocs/01-props-state-validation')),
+  },
 ];
