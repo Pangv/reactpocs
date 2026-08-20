@@ -14,7 +14,7 @@ src/
 │       ├── meta.ts              # Titel, Beschreibung, Quellcode-Links, Mermaid-Diagramm
 │       ├── views/
 │       │   └── AutocompleteFormView.tsx   # Composition Root des POCs
-│       ├── components/          # Gekapselte Unterkomponenten (z. B. ValidatedAutocomplete)
+│       ├── components/          # Gekapselte Unterkomponenten (z. B. ValidateAutocomplete)
 │       └── validators/          # Reine Validierungsfunktionen (E-Mail, Telefonnummer)
 ├── components/
 │   └── PropFlowDiagram.tsx      # Rendert Mermaid-Diagramme zur Visualisierung des Datenflusses

@@ -10,14 +10,14 @@ export const meta: PocMeta = {
   repoBaseUrl,
   sourceFiles: [
     { label: 'View', path: 'src/pocs/01-props-state-validation/views/AutocompleteFormView.tsx' },
-    { label: 'Komponente', path: 'src/pocs/01-props-state-validation/components/ValidatedAutocompleteProps.tsx' },
+    { label: 'Komponente', path: 'src/pocs/01-props-state-validation/components/ValidateAutocompleteProps.tsx' },
     { label: 'Validatoren', path: 'src/pocs/01-props-state-validation/utils/validators.ts' },
     { label: 'Index/Einstieg', path: 'src/pocs/01-props-state-validation/index.tsx' },
   ],
   propFlowDiagram: `
 flowchart TD
     A["AutocompleteFormView"]
-    B["ValidatedAutocompleteProps<br/>value, onChange, error"]
+    B["ValidateAutocompleteProps<br/>value, onChange, error"]
     C["validators.ts"]
     D["validateEmail(value)<br/>validatePhone(value)"]
     E{"error vorhanden?"}

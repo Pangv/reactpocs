@@ -2,7 +2,7 @@ import { Autocomplete, Stack, TextField } from '@mui/material';
 import { SourceFileTag } from '../../../components/SourceFileTag';
 import { meta } from '../meta';
 
-interface ValidatedAutocompleteProps {
+interface ValidateAutocompleteProps {
   options: string[];
   value: string;
   onChange: (value: string) => void;
@@ -10,18 +10,18 @@ interface ValidatedAutocompleteProps {
   label: string;
 }
 
-export function ValidatedAutocompleteProps({
+export function ValidateAutocompleteProps({
   options,
   value,
   onChange,
   error,
   label,
-}: ValidatedAutocompleteProps) {
+}: ValidateAutocompleteProps) {
   return (
     <Stack spacing={1}>
       <SourceFileTag
-        fileName="ValidatedAutocompleteProps.tsx"
-        path="src/pocs/01-props-state-validation/components/ValidatedAutocompleteProps.tsx"
+        fileName="ValidateAutocompleteProps.tsx"
+        path="src/pocs/01-props-state-validation/components/ValidateAutocompleteProps.tsx"
         repoBaseUrl={meta.repoBaseUrl!}
       />
       <Autocomplete
