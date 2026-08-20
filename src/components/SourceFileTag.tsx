@@ -1,5 +1,4 @@
 import { Chip } from '@mui/material';
-import CodeIcon from '@mui/icons-material/Code';
 
 interface SourceFileTagProps {
   fileName: string;
@@ -15,7 +14,6 @@ export function SourceFileTag({ fileName, path, repoBaseUrl }: SourceFileTagProp
       target="_blank"
       rel="noopener noreferrer"
       clickable
-      icon={<CodeIcon fontSize="small" />}
       label={fileName}
       variant="outlined"
       size="small"

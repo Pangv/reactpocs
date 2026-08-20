@@ -1,4 +1,3 @@
-import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import { Box, Card, CardActionArea, CardContent, Chip, Grid, Stack, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { pocRegistry } from '../registry/pocRegistry';
@@ -27,7 +26,6 @@ export default function HomePage() {
                       <Typography variant="h5" sx={{ mt: 1, mb: 1.5 }}>{poc.title}</Typography>
                       <Typography color="text.secondary">{poc.description}</Typography>
                     </Box>
-                    <ArrowForwardRoundedIcon color="secondary" />
                   </Stack>
                 </CardContent>
               </CardActionArea>

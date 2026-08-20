@@ -70,28 +70,25 @@ Jedes hinzukommende Pattern soll **isoliert, lesbar und im Code nachvollziehbar*
 ## Setup
 
 ### Voraussetzungen
-- Node.js (>= 18.x empfohlen)
-- npm oder yarn
+- pnpm (>= 9.9 empfohlen)
 
 ### Installation
 
 ```bash
 git clone https://github.com/Pangv/reactpocs.git
 cd reactpocs
-npm install
+pnpm install
 
 Entwicklungsserver starten
 
-npm run dev
+pnpm dev
 
 Die App ist danach unter http://localhost:5173 (Vite-Standardport) erreichbar.
 Build
 
-npm run build
+pnpm build
 
 Build lokal testen
 
-npm run preview
-
-
-Passe Ports/Skript-Namen an, falls ihr **Create React App** statt **Vite** nutzt – sag mir kurz, welches Tooling verwendet wird, dann gleiche ich die Befehle an.
+pnpm preview
+```
