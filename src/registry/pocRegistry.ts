@@ -10,7 +10,8 @@ export interface PocMeta {
   title: string;
   description: string;
   repoBaseUrl?: string;
-  sourceFiles?: PocSourceFile[];
+  sourceFiles?: Array<{ label: string; path: string }>;
+  propFlowDiagram?: string;
 }
 
 export interface PocEntry extends PocMeta {

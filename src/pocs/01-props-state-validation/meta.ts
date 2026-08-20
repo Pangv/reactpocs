@@ -14,6 +14,25 @@ export const meta: PocMeta = {
     { label: 'Validatoren', path: 'src/pocs/01-props-state-validation/utils/validators.ts' },
     { label: 'Index/Einstieg', path: 'src/pocs/01-props-state-validation/index.tsx' },
   ],
+  propFlowDiagram: `
+flowchart TD
+    A["AutocompleteFormView"]
+    B["ValidatedAutocompleteProps<br/>value, onChange, error"]
+    C["validators.ts"]
+    D["validateEmail(value)<br/>validatePhone(value)"]
+    E{"error vorhanden?"}
+    F["Submit-Button deaktiviert<br/>Maskenwechsel deaktiviert"]
+    G["Submit möglich<br/>Maskenwechsel möglich"]
+
+    A -->|"Props"| B
+    B -->|"onInputChange(value)"| A
+    A -->|"Validierung"| C
+    C --> D
+    D -->|"error"| B
+    B --> E
+    E -->|"Ja"| F
+    E -->|"Nein"| G
+`,
 };
 
 export default meta;

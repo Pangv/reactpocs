@@ -2,6 +2,7 @@ import { Paper, Stack } from '@mui/material';
 import { SourceFileTag } from '../../components/SourceFileTag';
 import AutocompleteFormView from '@/pocs/01-props-state-validation/views/AutocompleteFormView';
 import { meta } from './meta';
+import PropFlowDiagram from '@/components/PropFlowDiagram';
 
 export default function PocPropsStateValidation() {
   return (
@@ -14,6 +15,7 @@ export default function PocPropsStateValidation() {
         />
       </Stack>
       <AutocompleteFormView />
+      <PropFlowDiagram diagram={meta.propFlowDiagram} />
     </Paper>
   );
 }

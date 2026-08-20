@@ -37,7 +37,7 @@ export default function Sidebar() {
       <Toolbar sx={{ alignItems: 'flex-start', py: 3, minHeight: 92 }}>
         <Box>
           <Typography variant="overline" sx={{ letterSpacing: '.16em', opacity: 0.65 }}>
-            Component lab
+            Component lab  
           </Typography>
           <Typography variant="h6" sx={{ fontWeight: 800 }}>React POC Atlas</Typography>
         </Box>

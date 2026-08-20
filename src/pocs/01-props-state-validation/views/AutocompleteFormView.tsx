@@ -1,9 +1,10 @@
 import { useMemo, useState } from 'react';
-import { Alert, Button, Stack, Typography } from '@mui/material';
+import { Alert, Button, Divider, Paper, Stack, Typography } from '@mui/material';
 import { SourceFileTag } from '../../../components/SourceFileTag';
 import { ValidatedAutocompleteProps } from '../components/ValidateAutocompleteProps';
 import { validateEmail, validatePhone } from '../utils/validators';
 import { meta } from '../meta';
+import PropFlowDiagram from '@/components/PropFlowDiagram';
 
 const emailOptions = ['max.mustermann@firma.de', 'lisa.schmidt@firma.de'];
 const phoneOptions = ['+49 170 1234567', '+49 30 987654'];
@@ -70,6 +71,8 @@ export default function AutocompleteFormView() {
       {submitted && isValid && (
         <Alert severity="success">Die Kontaktdaten sind valide und wurden angenommen.</Alert>
       )}
+
+
     </Stack>
   );
 }

@@ -9,13 +9,15 @@
     "typecheck": "tsc --noEmit",
     "preview": "vite preview",
     "deploy": "pnpm build && firebase deploy --only hosting",
-    "deploy:preview": "pnpm build && firebase hosting:channel:deploy preview"
+    "deploy:preview": "pnpm build && firebase hosting:channel:deploy preview",
+    "new-poc": "node scripts/new-poc.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^9.3.1",
     "@mui/material": "^9.3.1",
+    "mermaid": "^11.17.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.2"
